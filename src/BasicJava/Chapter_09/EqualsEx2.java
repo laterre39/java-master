@@ -4,7 +4,7 @@ class Person {
     long id;
 
     public boolean equals(Object obj) {  // equals 오버라이딩
-        if (obj instanceof Person) { // 객체가 person 을 참조하면 객체의 id를 비교한다.
+        if (obj instanceof Person) { // 인스턴스가 person 을 참조하면 인스턴스의 id를 비교한다.
             return id == ((Person)obj).id;
         }
         else return false;
@@ -14,7 +14,7 @@ class Person {
         this.id = id;
     }
 }
-public class ExEquals2 {
+public class EqualsEx2 {
     public static void main(String[] args) {
         Person p1 = new Person(1234123422L);
         Person p2 = new Person(1234123422L);
