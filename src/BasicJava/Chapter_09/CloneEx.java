@@ -1,6 +1,5 @@
 package BasicJava.Chapter_09;
-
-import javax.sound.midi.Soundbank;
+import java.util.Arrays;
 
 class Point implements Cloneable { // cloneable 인터페이스를 구현해야지 clone을 호출할 수 있다.
     int x, y;
@@ -37,9 +36,15 @@ public class CloneEx {
         System.out.println(original);
         System.out.println(copy);
 
-        Point orginal2 = new Point(7, 9);
-        Point copy2 = orginal2.clone2(); // 번거로운 타입 형변환을 하지 않아도 된다.
-        System.out.println(orginal2);
+        Point original2 = new Point(7, 9);
+        Point copy2 = original2.clone2(); // 번거로운 타입 형변환을 하지 않아도 된다.
+        System.out.println(original2);
         System.out.println(copy2);
+
+        int[] arr = {1, 3, 5, 7, 9};
+        int[] arrClone = arr.clone();
+        arrClone[0] = 6;
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arrClone));
     }
 }
